@@ -7,6 +7,8 @@ gem 'rails', '3.0.3'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'mongrel'
+gem 'ruby-debug'
+gem 'annotate-models'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -15,7 +17,6 @@ gem 'mongrel'
 # gem 'capistrano'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-gem 'ruby-debug'
 #gem 'ruby-debug19'
 
 # Bundle the extra gems:
@@ -36,4 +37,5 @@ end
 
 group :test do
   gem 'rspec', '2.0.0'
+  gem 'spork' #用处是开一个测试端口，避免autotest每次测试都加载rails环境，提高测试速度
 end

@@ -1,15 +1,21 @@
 # == Schema Information
 # Schema version: 20110105083351
 #
-# Table name: posts
+# Table name: comments
 #
 #  id         :integer         not null, primary key
-#  title      :string(255)
 #  content    :text
+#  post_id    :integer
 #  created_at :datetime
 #  updated_at :datetime
 #
 
-class Post < ActiveRecord::Base
-  has_many :comments
+class Comment < ActiveRecord::Base
+  belongs_to :post
+
+  validates :content, :presence => true
+
+  def haha
+    return 1
+  end
 end
